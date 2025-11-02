@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft, elegant, eye-friendly palette */
+@layer base {
+  :root {
+    --background: 210 25% 97%;
+    --foreground: 222 47% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+
+    --primary: 200 75% 45%;           /* calm blue-teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 222 47% 12%;
+
+    --muted: 210 15% 90%;
+    --muted-foreground: 222 20% 35%;
+
+    --accent: 186 52% 52%;            /* soft cyan accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 16% 86%;
+    --input: 210 16% 86%;
+    --ring: 186 52% 52%;
+
+    --radius: 0.75rem;
+
+    --team1: 17 88% 62%;  /* soft coral */
+    --team2: 186 52% 52%; /* soft cyan */
+
+    --gradient-primary: linear-gradient(150deg, hsl(210 25% 97%), hsl(200 35% 90%));
+    --gradient-accent: linear-gradient(145deg, hsl(186 52% 52%), hsl(199 72% 58%));
+    --shadow-glow: 0 0 35px hsl(186 52% 52% / 0.18);
+    --shadow-elegant: 0 14px 35px -18px hsl(213 24% 30% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-tajawal;
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
